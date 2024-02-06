@@ -10,5 +10,6 @@ namespace ApiSolution.Model
         public int locationID { get; set; }
         public DateTime sartdate { get; set; }
         public DateTime enddate { get; set; }
+        public string name { get; set; }
     }
 }

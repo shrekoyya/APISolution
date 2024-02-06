@@ -10,7 +10,7 @@ namespace ApiSolution.Controller
 {
     public class LocationController : ApiController
     {
-
+        [HttpGet]
         public IEnumerable<Locations> GetAllusers()
         {
             return location;
@@ -22,7 +22,8 @@ namespace ApiSolution.Controller
         new Locations { locationID = 2, sartdate = DateTime.Today.AddHours(13),enddate=DateTime.Today.AddHours(18) },
         new Locations { locationID = 3, sartdate = DateTime.Today.AddHours(20),enddate=DateTime.Today.AddHours(24) },
        };
-        // GET api/<controller>/5
+        // GET api/<controller>
+        [HttpGet]
         public IHttpActionResult Getuses()
         {
 
