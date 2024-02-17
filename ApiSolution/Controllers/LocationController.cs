@@ -24,9 +24,9 @@ namespace ApiSolution.Controller
         }
         List<Locations> location = new List<Locations>
        {
-        new Locations { locationID = 1, sartdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13)},
-        new Locations { locationID = 2, sartdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13) },
-        new Locations { locationID = 3, sartdate = DateTime.Today.AddHours(20),enddate=DateTime.Today.AddHours(24) },
+        new Locations { locationID = 1, sartdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13),name="USA"},
+        new Locations { locationID = 2, sartdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13),name="CANADA"},
+        new Locations { locationID = 3, sartdate = DateTime.Today.AddHours(20),enddate=DateTime.Today.AddHours(24),name="INDIA" },
        };
         //// GET api/<controller>
         //[HttpGet]
