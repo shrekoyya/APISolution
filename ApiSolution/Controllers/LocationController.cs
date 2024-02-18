@@ -14,7 +14,7 @@ namespace ApiSolution.Controller
         public IEnumerable<Locations> GetAllusers()
         {
 
-            var locations = location.FindAll(p => p.sartdate == DateTime.Today.AddHours(10) && p.enddate == DateTime.Today.AddHours(13));
+            var locations = location.FindAll(p => p.startdate == DateTime.Today.AddHours(10) || p.startdate == DateTime.Today.AddHours(13));
             if (locations == null)
             {
                 return null;
@@ -24,9 +24,9 @@ namespace ApiSolution.Controller
         }
         List<Locations> location = new List<Locations>
        {
-        new Locations { locationID = 1, sartdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13),name="USA"},
-        new Locations { locationID = 2, sartdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13),name="CANADA"},
-        new Locations { locationID = 3, sartdate = DateTime.Today.AddHours(20),enddate=DateTime.Today.AddHours(24),name="INDIA" },
+        new Locations { locationID = 1, startdate = DateTime.Today.AddHours(10),enddate=DateTime.Today.AddHours(13),name="USA"},
+        new Locations { locationID = 2, startdate = DateTime.Today.AddHours(13),enddate=DateTime.Today.AddHours(13),name="CANADA"},
+        new Locations { locationID = 3, startdate = DateTime.Today.AddHours(20),enddate=DateTime.Today.AddHours(24),name="INDIA" },
        };
         //// GET api/<controller>
         //[HttpGet]
